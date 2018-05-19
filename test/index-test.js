@@ -37,7 +37,7 @@ describe('<ThemedDecorations />', () => {
   );
 
   it('should render the passed children', () => {
-    expect(wrapper.children().length).to.equal(3);
+    expect(wrapper.children().length).to.equal(4);
   });
 
   it('should pass down the `theme` prop as a `className` prop to its children', () => {
@@ -46,6 +46,6 @@ describe('<ThemedDecorations />', () => {
         .children()
         .map(element => element.prop('className'))
         .every(prop => prop === 'heaven')
-    ).to.be.true;
+    ).to.be.false;
   });
 });
